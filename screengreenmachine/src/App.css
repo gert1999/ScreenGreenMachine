@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 .App {
   text-align: center;
 }
@@ -14,7 +15,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-image: url("https://whyy.org/wp-content/uploads/2019/12/bright-daylight-environment-forest-240040-1-768x512.jpg");
+  background-position: center;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +26,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: "Montserrat";
 }
 
 .App-link {
