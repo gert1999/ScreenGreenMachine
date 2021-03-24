@@ -29,6 +29,11 @@
   font-family: "Montserrat";
 }
 
+iframe:hover {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .App-link {
   color: #61dafb;
 }
