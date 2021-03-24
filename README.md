@@ -4,3 +4,4 @@ The following people are working in this repository:
 - Gertjan Egas
 - Marc van der Made
 - Luuk 's-Gravendijk
+- Daphne Bruggeman 
