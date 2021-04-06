@@ -8,19 +8,14 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+map {
   /* background-color: #282c34; */
-  background-image: url("https://whyy.org/wp-content/uploads/2019/12/bright-daylight-environment-forest-240040-1-768x512.jpg");
+  background-image: url("./img/map.png");
   background-position: center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
+  flex: 10;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -29,20 +24,50 @@
   font-family: "Montserrat";
 }
 
-iframe:hover {
-  opacity: 0;
-  pointer-events: none;
+* {
+  box-sizing: border-box; 
+ }
+
+.main {
+   display: flex;
+   margin: 0;
+   min-height: calc(100vh - 100vh);
 }
 
-.App-link {
-  color: #61dafb;
+.main > aside {
+   flex: 1 20vw;
+   background: #e5e7e1;
+}
+ .main > .nav-button {
+   order: -1;
+ }
+map, .nav-button, aside {
+   padding: 1em;
+ }
+ .nav-button {
+   background: yellowgreen;
+   height: auto;
+ }
+nav {
+  background-color: #0fc4b9;
+  border: 1px solid #284e58;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-button {
+    background-color: #fffefe;
+    border: 0.2px solid #284e58;
+    border-radius: 5px;
+    color: rgb(97, 97, 97);
+    padding: 10px 32px;
+    margin: 10px 7.5px 10px 7.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-button:hover{
+    background-color: #cef3f0;
 }

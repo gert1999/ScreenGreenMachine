@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { Map } from './components/Map';
+
+import { BrowserRouter  as Router, Switch, Route, Link } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Screen Green Machine💚
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn react
-        </a>
-        <iframe id="vid" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <nav>
+        <Link className="nav-button" to={'/home'}>Home</Link>
+        <Link className="nav-button" to={'/map'}>Map</Link>
+        <Link className="nav-button" to={'/contact'}>Contact</Link>
+        <Link className="nav-button" to={'/login'}>Login</Link>
+      </nav>
+      <Switch>
+        <Route path="/map" component={ Map }/>
+      </Switch>
+      </div>
+    </Router>
   );
 }
 
