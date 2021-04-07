@@ -1,5 +1,5 @@
 import './App.css';
-import { Map } from './components/Map';
+import Map from "./components/Map.js";
 
 import { BrowserRouter  as Router, Switch, Route, Link } from "react-router-dom";
 
