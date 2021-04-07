@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 
 const Map = () => {
-    mapboxgl.accessToken = "pk.eyJ1IjoibWFyY3ZkbWFkZXN0dWRlbnQiLCJhIjoiY2tuNXlsZzBoMDkwMTJvbzZyZjl1a3J2ZCJ9.zK_uoR8p8PGDgoyqwtQl4A";
+    require('dotenv').config({ path: ".env"});
+    mapboxgl.accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
     useEffect(() => {
         let map = new mapboxgl.Map({
