@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+/* .groupphoto {
+  background-image: url("./img/group_photo.png");
+} */
+
 map {
   /* background-color: #282c34; */
   background-image: url("./img/map.png");

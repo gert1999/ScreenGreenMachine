@@ -2,6 +2,7 @@ import './App.css';
 import { Map } from './components/Map';
 
 import { BrowserRouter  as Router, Switch, Route, Link } from "react-router-dom";
+import { Contact } from './components/Contact';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       </nav>
       <Switch>
         <Route path="/map" component={ Map }/>
+        <Route path="/contact" component={ Contact }/>
       </Switch>
       </div>
     </Router>
