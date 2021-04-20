@@ -6,7 +6,16 @@ export class MapPage extends React.Component {
         return (
             <div class="d-flex flex-row">
                 <div><Map/></div>
-                <div class="scoreBoard">Flex item 2</div>
+                <div class="scoreBoard">
+                    <h1>Screen Green Machine</h1>
+                    <ul>
+                        <li>Amount of green:</li>
+                        <li>...%</li>
+                        <li>iets</li>
+                        <li>iets</li>
+                        <li>iets</li>
+                    </ul>
+                </div>
             </div>
         )
     }
