@@ -60,3 +60,9 @@ nav {
 .nav-button:hover{
     background-color: #cef3f0;
 }
+
+.scoreBoard {
+  background-color: #fff8b5;
+  width: 100%;
+  height: auto;
+}

@@ -8,6 +8,7 @@ const Map = () => {
         let map = new mapboxgl.Map({
             container: "mapContainer",
             style: "mapbox://styles/mapbox/satellite-streets-v9",
+            //style: "mapbox://styles/mapbox/satellite-v9", voor map zonder namen
             preserveDrawingBuffer: true,
             center: [4.5, 51.91], // starting position [lng, lat]
             zoom: 12, // starting zoom
@@ -25,7 +26,8 @@ const Map = () => {
         map.touchZoomRotate.disableRotation();
     }, []);
 
-    return <div id="mapContainer" className="map"></div>;
+    return <div id="mapContainer" className="map"></div>
+    ;
 };
 
 export default Map;

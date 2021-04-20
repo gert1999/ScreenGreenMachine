@@ -1,5 +1,5 @@
 import './App.css';
-import Map from "./components/Map.js";
+import { MapPage } from "./components/MapPage";
 
 import { BrowserRouter  as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ function App() {
         <Link className="nav-button" to={'/login'}>Login</Link>
       </nav>
       <Switch>
-        <Route path="/map" component={ Map }/>
+        <Route path="/map" component={ MapPage }/>
       </Switch>
       </div>
     </Router>
