@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+/* .groupphoto {
+  background-image: url("./img/group_photo.png");
+} */
+
 map {
   /* background-color: #282c34; */
   background-image: url("./img/map.png");
@@ -49,7 +53,7 @@ map, .nav-button, aside {
    height: auto;
  }
 nav {
-  background-color: #0fc4b9;
+  background-color: #9BBD77;
   border: 1px solid #284e58;
 }
 
@@ -70,4 +74,10 @@ nav {
 
 .nav-button:hover{
     background-color: #cef3f0;
+}
+
+.footer {
+  text-align: center;
+  background-color: #74A343;
+  padding: 10px;
 }

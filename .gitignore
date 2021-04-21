@@ -13,8 +13,8 @@
 
 # misc
 .DS_Store
-thumbs.db 
-.env
+thumbs.db
+.env 
 .env.local
 .env.development.local
 .env.test.local
