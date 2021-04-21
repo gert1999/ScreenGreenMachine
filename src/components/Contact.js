@@ -30,7 +30,7 @@ export class Contact extends React.Component {
                         <li>Marc</li>
                         <li>Quincy</li>
                     </ul>
-                    <img className="groupphoto"></img>
+                    <img className="groupphoto" alt="team screen green machine"></img>
                 </left>
                 <right>
 
