@@ -2,7 +2,7 @@ import './App.css';
 import { Map } from './components/Map';
 import { HomePage } from './components/home/HomePage';
 import { Footer } from './components/Footer';
-
+import { MapPage } from "./components/MapPage";
 import { BrowserRouter  as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import { Contact } from './components/Contact';
 
@@ -20,8 +20,8 @@ function App() {
       </nav>
       <Switch>
         <Route path="/home" component={ HomePage }/>
-        <Route path="/map" component={ Map }/>
         <Route path="/contact" component={ Contact }/>
+        <Route path="/map" component={ MapPage }/>
       </Switch>
       </div>
       <Footer />
