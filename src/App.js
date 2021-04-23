@@ -1,9 +1,12 @@
+import { BrowserRouter  as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+
+// import css
 import './App.css';
-import { Map } from './components/Map';
+
+// import components
 import { HomePage } from './components/home/HomePage';
 import { Footer } from './components/Footer';
 import { MapPage } from "./components/MapPage";
-import { BrowserRouter  as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import { Contact } from './components/Contact';
 
 
