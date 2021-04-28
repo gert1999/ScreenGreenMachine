@@ -1,5 +1,6 @@
 import './App.css';
 import { Map } from './components/Map';
+import { Contact } from './components/Contact';
 
 import { BrowserRouter  as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -16,6 +17,7 @@ function App() {
       </nav>
       <Switch>
         <Route path="/map" component={ Map }/>
+        <Route path="/contact" component={ Contact }/>
       </Switch>
       </div>
     </Router>
