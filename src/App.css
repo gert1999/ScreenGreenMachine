@@ -71,3 +71,9 @@ nav {
 .nav-button:hover{
     background-color: #cef3f0;
 }
+
+team-photo{ 
+  background-image: url("./img/team.png");
+  background-position: center;
+  background-size: cover;
+}
