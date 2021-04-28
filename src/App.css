@@ -78,3 +78,18 @@ nav {
   margin-left: auto;
   margin-right: auto;
 }
+.barholder{
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.greenbar{
+  width: 20%;
+}
+.bluebar{
+  width: 40%;
+}
+.yellowbar{
+  width: 40%;
+}

@@ -11,13 +11,20 @@ export class MapPage extends React.Component {
                 </div>
                 <div class="scoreBoard">
                     <h1>Screen Green Machine</h1>
-                    <ul>
-                        <li>Amount of green:</li>
-                        <li>...%</li>
-                        <li>iets</li>
-                        <li>iets</li>
-                        <li>iets</li>
-                    </ul>
+                    <label>Hoeveelheid groen:</label>
+                    <div class="progress barholder">
+                        <div class="progress-bar bg-success greenbar" role="greenbar">20%</div>
+                    </div>
+                    <label>Hoeveelheid water:</label>
+                    <div class="progress barholder">
+                        <div class="progress-bar bg-info bluebar" role="bluebar">40%</div>
+                    </div>
+                    <label>Hoeveelheid gebouwen:</label>
+                    <div class="progress barholder">
+                        <div class="progress-bar bg-warning yellowbar" role="yellowbar">40%</div>
+                    </div>
+                    <br></br>
+                    <h3 class ="Mapscore">Score / </h3>
                 </div>
             </div>
         )
