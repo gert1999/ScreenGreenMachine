@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export class InfoDivs extends React.Component {
     render() {
@@ -13,7 +14,7 @@ export class InfoDivs extends React.Component {
                             uw buurt. Registreer dan en
                             meld u aan voor de newsbrief.
                     </p>
-                        <button className="homeBtn">Registreren</button>
+                        <Link to="/register" className="homeBtn">Registreren</Link>
                     </div>
                 </div>
                 <div className="infoDiv">
