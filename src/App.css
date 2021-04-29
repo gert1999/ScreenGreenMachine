@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat';
 }
 
 .App-logo {
@@ -44,6 +45,10 @@ map, .nav-button, aside {
 nav {
   background-color: #9BBD77;
   border: 1px solid #284e58;
+}
+
+p {
+  font-size: 1.2em;
 }
 
 .nav-button {
@@ -106,7 +111,7 @@ nav {
   border: none;
   z-index: 1;
   position: relative;
-  background: url("./img/map.PNG") no-repeat;
+  background: url("./img/map.png") no-repeat;
   background-size: cover;
   filter: grayscale(100%);
   transition: filter 500ms;

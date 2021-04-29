@@ -1,4 +1,4 @@
-import { BrowserRouter  as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter  as Router, Switch, Route, Link, } from "react-router-dom";
 
 // import css
 import './App.css';
@@ -13,16 +13,15 @@ import { Contact } from './components/Contact';
 function App() {
   return (
     <Router>
-      <Redirect exact from="/" to="home" />
       <div className="App">
       <nav>
-        <Link className="nav-button" to={'/home'}>Home</Link>
+        <Link className="nav-button" to={'/'}>Home</Link>
         <Link className="nav-button" to={'/map'}>Map</Link>
         <Link className="nav-button" to={'/contact'}>Team</Link>
         <Link className="nav-button" to={'/login'}>Login</Link>
       </nav>
       <Switch>
-        <Route path="/home" component={ HomePage }/>
+        <Route exact path="/" component={ HomePage }/>
         <Route path="/contact" component={ Contact }/>
         <Route path="/map" component={ MapPage }/>
       </Switch>
