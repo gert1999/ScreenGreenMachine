@@ -17,20 +17,35 @@ export class Contact extends React.Component {
     render() {
         return(
             <div className="main">
-                <left>
-                    <h1>Team 1</h1>
-                    <ul>
-                        <li>Daphne</li>
-                        <li>Gertjan</li>
-                        <li>Luuk</li>
-                        <li>Marc</li>
-                        <li>Quincy</li>
-                    </ul>
-                    <img className="groupphoto" alt="team screen green machine"></img>
-                </left>
-                <right>
+                <div className="team-container">
+                    <div className="member-container"> 
+                        <div className="member">
+                            <h2>Daphne Bruggeman</h2>
+                            <p>taak</p>
+                        </div>
+                        <div className="member">
+                            <h2>Marc van de Made</h2>
+                            <p>taak</p>
+                        </div>
+                        <div className="member">
+                            <h2>Quincy van der Sluis</h2>
+                            <p>taak</p>
+                        </div>
+                        <div className="member">
+                            <h2>Luuk 's Gravendijk</h2>
+                            <p>taak</p>
+                        </div>
+                        <div className="member">
+                            <h2>Gertjan Egas</h2>
+                            <p>taak</p>
+                        </div>
+                    </div>
 
-                </right>
+                    {/* teamphoto */}
+                    <div className="groupphoto" > 
+
+                    </div>
+                </div>
             </div>
         )
     }

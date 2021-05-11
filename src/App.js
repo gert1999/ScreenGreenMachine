@@ -2,11 +2,7 @@ import { BrowserRouter  as Router, Switch, Route, Link, } from "react-router-dom
 
 // import css
 import './App.css';
-<<<<<<< HEAD
-import { Map } from './components/Map';
-import { Contact } from './components/Contact';
-=======
->>>>>>> origin/develop
+
 
 // import components
 import { HomePage } from './components/home/HomePage';
@@ -26,14 +22,9 @@ function App() {
         <Link className="nav-button" to={'/login'}>Login</Link>
       </nav>
       <Switch>
-<<<<<<< HEAD
-        <Route path="/map" component={ Map }/>
-        <Route path="/contact" component={ Contact }/>
-=======
         <Route exact path="/" component={ HomePage }/>
         <Route path="/contact" component={ Contact }/>
         <Route path="/map" component={ MapPage }/>
->>>>>>> origin/develop
       </Switch>
       </div>
       <Footer />

@@ -69,18 +69,45 @@ p {
 .nav-button:hover{
     background-color: #cef3f0;
 }
+.team-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.member-container{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.member{
+  background-color: #74A343;
+  width: 300px;
+  margin: 5px;
+  margin-bottom: 36px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.member h2{
+  font-size: 25px;
+}
 
-<<<<<<< HEAD
-team-photo{ 
-  background-image: url("./img/team.png");
+.groupphoto{  
+  background-image: url("./img/group_photo.PNG");
+  width: 50%;
+  height: 100%;
   background-position: center;
   background-size: cover;
-=======
+}
+
 .footer {
   text-align: center;
   background-color: #74A343;
   padding: 10px;
 }
+
 .scoreBoard {
   background-color: #fff8b5;
   width: 100%;
@@ -181,5 +208,4 @@ team-photo{
   border-radius: 20px;
   background-color: #9BBD77;
   padding: 20px;
->>>>>>> origin/develop
 }
