@@ -1,17 +1,6 @@
 import React from "react";
 
-<<<<<<< HEAD
-
 export class Contact extends React.Component {
-    constructor(){
-        super()
-        this.state = {
-            calculate : false
-        }
-    }
-=======
-export class Contact extends React.Component {
->>>>>>> origin/develop
 
     componentDidMount(){
         console.log("DidMount Project");
@@ -24,33 +13,6 @@ export class Contact extends React.Component {
     componentWillUnmount(){
         console.log("WillUnmount Project");
     }
-<<<<<<< HEAD
-    render() {
-        return(
-            <div>
-                Team 1
-                <br></br>
-                Daphne Bruggeman
-                Gertjan Egas 
-                Luuk Gravendijk
-                Marc van der Made 
-                Quincy van der Sluis
-                <team-photo></team-photo>
-                <br></br>
-                Gemeente Rotterdam 
-                <br></br>
-                Tel: 14 010
-                Web: https://www.rotterdam.nl/
-                <br></br> 
-                API
-                MapBox
-            </div>
-        )
-    }
-    
-
-}
-=======
     
     render() {
         return(
@@ -73,4 +35,3 @@ export class Contact extends React.Component {
         )
     }
 }
->>>>>>> origin/develop
