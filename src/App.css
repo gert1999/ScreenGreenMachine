@@ -176,3 +176,19 @@ p {
   background-color: #9BBD77;
   padding: 20px;
 }
+
+.barholder{
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.greenbar{
+  width: 100%;
+}
+.bluebar{
+  width: 100%;
+}
+.yellowbar{
+  width: 100%;
+}
