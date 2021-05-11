@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 
 export class Contact extends React.Component {
     constructor(){
@@ -8,6 +9,9 @@ export class Contact extends React.Component {
             calculate : false
         }
     }
+=======
+export class Contact extends React.Component {
+>>>>>>> origin/develop
 
     componentDidMount(){
         console.log("DidMount Project");
@@ -20,6 +24,7 @@ export class Contact extends React.Component {
     componentWillUnmount(){
         console.log("WillUnmount Project");
     }
+<<<<<<< HEAD
     render() {
         return(
             <div>
@@ -45,3 +50,27 @@ export class Contact extends React.Component {
     
 
 }
+=======
+    
+    render() {
+        return(
+            <div className="main">
+                <left>
+                    <h1>Team 1</h1>
+                    <ul>
+                        <li>Daphne</li>
+                        <li>Gertjan</li>
+                        <li>Luuk</li>
+                        <li>Marc</li>
+                        <li>Quincy</li>
+                    </ul>
+                    <img className="groupphoto" alt="team screen green machine"></img>
+                </left>
+                <right>
+
+                </right>
+            </div>
+        )
+    }
+}
+>>>>>>> origin/develop
