@@ -193,6 +193,18 @@ p {
   text-decoration: none;
 }
 
+.homephoto {
+  position: relative;
+  margin: auto;
+  background-image: url("./img/groupphoto.jpeg");
+  width: 600px;
+  height: 400px;
+  transform: scaleX(-1);
+  background-position: 50% 0%;
+  background-size: cover;
+  border-radius: 20px;
+}
+
 .infoWrapper {
   display: flex;
   flex-direction: row;
