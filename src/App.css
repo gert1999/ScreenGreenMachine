@@ -103,10 +103,11 @@ p {
 }
 
 .groupphoto{  
-  background-image: url("./img/group_photo.PNG");
+  background-image: url("./img/groupphoto.jpeg");
   width: 50%;
   height: 100%;
-  background-position: center;
+  transform: scaleX(-1);
+  background-position: 50% 0%;
   background-size: cover;
 }
 
