@@ -90,9 +90,16 @@ p {
   padding: 10px;
   border-radius: 20px;
 }
-.member h2{
+.member a{
   font-size: 25px;
   text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  transition: font-size 400ms;
+}
+.member a:hover{
+  font-size: 26px;
+  transition: font-size 400ms;
 }
 
 .groupphoto{  
