@@ -1,7 +1,21 @@
 import React from "react";
 import Map from "./Map";
+// import ScriptTag from "react-script-tag";
+import * as ml5 from "ml5";
+
 
 export class MapPage extends React.Component {
+
+    constructor(){
+        super()
+
+        let classifier = ml5.imageClassifier("model/model.json", MapPage.onModelReady);
+        
+    }
+
+    onModelReady(){
+        console.log("Model is ready");
+    }
 
     fakeResult() {
         let max = 100;
