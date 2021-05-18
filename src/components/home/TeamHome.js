@@ -5,7 +5,7 @@ export class TeamHome extends React.Component {
     render() {
         return (
                 <div className="d-flex flex-column teamDiv">
-                    <img alt="team"></img>
+                    <div className="homephoto"></div>
                     <div className="teamText">
                         <h2>Ons team</h2>
                         <p>
