@@ -246,3 +246,30 @@ p {
 .yellowbar{
   width: 100%;
 }
+
+/* Phone view */
+
+@media only screen and (min-width: 320px) and (max-width: 568px){
+
+.homephoto{
+  display:none!important;
+}
+
+.uitlegDiv {
+  margin-top:40px!important;
+  width: 100%;
+}
+
+.mapBtn{
+  margin-top:30px!important;
+}
+
+.infoDiv {
+  width: 100%;
+}
+
+.teamDiv{
+  min-height: 0vh!important;
+}
+
+}

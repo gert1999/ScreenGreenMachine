@@ -1,4 +1,5 @@
 import { BrowserRouter  as Router, Switch, Route, Link, } from "react-router-dom";
+import * as FaIcons from "react-icons/fa";
 
 // import css
 import './App.css';
@@ -20,6 +21,9 @@ function App() {
         <Link className="nav-button" to={'/map'}>Map</Link>
         <Link className="nav-button" to={'/contact'}>Team</Link>
         <Link className="nav-button" to={'/login'}>Login</Link>
+        <Link className="nav-button-hamburger" to={'/'}>
+          <FaIcons.FaBars/>
+        </Link>
       </nav>
       <Switch>
         <Route exact path="/" component={ HomePage }/>
