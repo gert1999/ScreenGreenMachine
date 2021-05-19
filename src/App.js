@@ -10,21 +10,17 @@ import { HomePage } from './components/home/HomePage';
 import { Footer } from './components/Footer';
 import { MapPage } from "./components/MapPage";
 import { Contact } from './components/Contact';
+import { Nav } from './components/Nav'
+import { PhoneNav } from './components/PhoneNav'
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-      <nav>
-        <Link className="nav-button" to={'/'}>Home</Link>
-        <Link className="nav-button" to={'/map'}>Map</Link>
-        <Link className="nav-button" to={'/contact'}>Team</Link>
-        <Link className="nav-button" to={'/login'}>Login</Link>
-        <Link className="nav-button-hamburger" to={'/'}>
-          <FaIcons.FaBars/>
-        </Link>
-      </nav>
+      <Nav/>
+      <PhoneNav/>
+
       <Switch>
         <Route exact path="/" component={ HomePage }/>
         <Route path="/contact" component={ Contact }/>
