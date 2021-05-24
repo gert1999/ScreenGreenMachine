@@ -8,8 +8,10 @@ export class PhoneNav extends React.Component {
         return(
             <nav class="navbar">
                          <NavDropdown eventKey={3} title={<div style={{display: "inline-block"}}><FaIcons.FaBars/></div>}>
-                            <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
-                            <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+                            <NavDropdown.Item eventKey="/home">Home</NavDropdown.Item>
+                            <NavDropdown.Item eventKey={3.2}>Map</NavDropdown.Item>
+                            <NavDropdown.Item eventKey="/contact">Team</NavDropdown.Item>
+                            <NavDropdown.Item eventKey={3.2}>Login</NavDropdown.Item>
                         </NavDropdown>
             </nav>)}
 }

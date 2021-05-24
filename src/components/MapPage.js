@@ -39,7 +39,7 @@ export class MapPage extends React.Component {
                 <button onClick={() => this.fakeResult()} className="testButton btn btn-success">CALCULATE</button>
                 </div>
                 <div className="scoreBoard">
-                    <h1>Screen Green Machine</h1>
+                    <h1 class="Title">Screen Green Machine</h1>
                     <label>Hoeveelheid groen:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-success greenbar" role="greenbar">Not scanned</div>

@@ -18,8 +18,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Nav/>
-      <PhoneNav/>
+        <div className="navclass"><Nav/></div>
+        <div className="phonenavclass"><PhoneNav/></div>
 
       <Switch>
         <Route exact path="/" component={ HomePage }/>

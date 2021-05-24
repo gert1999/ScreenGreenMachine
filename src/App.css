@@ -118,6 +118,7 @@ p {
 }
 
 .scoreBoard {
+  position: relative;
   background-color: #fff8b5;
   width: 100%;
   height: auto;
@@ -185,6 +186,9 @@ p {
   border: black 2px solid;
   transition: padding 200ms;
 }
+.phonenavclass {
+  display: none;
+}
 
 .homeBtn:hover {
   color: black;
@@ -249,7 +253,7 @@ p {
 
 /* Phone view */
 
-@media only screen and (min-width: 320px) and (max-width: 568px){
+@media only screen and (max-width: 568px){
 
 .homephoto{
   display:none!important;
@@ -270,6 +274,16 @@ p {
 
 .teamDiv{
   min-height: 0vh!important;
+}
+
+.navclass{
+  display: none;
+}
+.phonenavclass{
+  display: block;
+}
+.Title, .Mapscore{
+  font-size: 1em;
 }
 
 }
