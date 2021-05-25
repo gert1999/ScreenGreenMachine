@@ -1,7 +1,8 @@
 import React from "react";
 import Map from "./Map";
 // import ScriptTag from "react-script-tag";
-import * as ml5 from "ml5";
+// import * as ml5 from "ml5";
+import PicImg from "../img/groupphoto.jpeg";
 
 
 export class MapPage extends React.Component {
@@ -9,7 +10,7 @@ export class MapPage extends React.Component {
     constructor(){
         super()
 
-        let classifier = ml5.imageClassifier("model/model.json", MapPage.onModelReady);
+      //  this.classifier = ml5.imageClassifier("model/model.json", this.onModelReady);
         
     }
 
@@ -18,6 +19,9 @@ export class MapPage extends React.Component {
     }
 
     fakeResult() {
+
+        //this.classify()
+
         let max = 100;
 
         let greenResult = Math.floor(Math.random() * max);
@@ -45,11 +49,22 @@ export class MapPage extends React.Component {
         scoreDiv.innerHTML = `Score: ${score}/${100 * 86}`
     }
 
+    classify(){
+        let mapContainer = document.getElementsByTagName("img")[0]
+        this.classifier.classify(mapContainer,()=> this.gotResult)
+        
+    }
+
+    gotResult(error, results){
+        console.log(results)
+    }
+
     render() {
         return (
             <div className="d-flex flex-row">
                 <div>
                     <Map/>
+                    <img src={PicImg}></img>
                 <button onClick={() => this.fakeResult()} className="testButton btn btn-success">CALCULATE</button>
                 </div>
                 <div className="scoreBoard">
