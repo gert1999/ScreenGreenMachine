@@ -1,26 +1,28 @@
 import React from "react";
 import Map from "./Map";
 // import ScriptTag from "react-script-tag";
-// import * as ml5 from "ml5";
+import * as ml5 from "ml5";
+// import model from "../model/model.json"
 import PicImg from "../img/groupphoto.jpeg";
 
 
 export class MapPage extends React.Component {
 
-    constructor(){
+    constructor() {
         super()
-
-      //  this.classifier = ml5.imageClassifier("model/model.json", this.onModelReady);
-        
-    }
-
-    onModelReady(){
-        console.log("Model is ready");
+        console.log("constructor")
+        this.classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/rMNYFk_ka/model.json", (err, res) => {
+            if (!err) {
+                console.log("model loaded")
+            } else {
+                console.log(err)
+            }
+        });
     }
 
     fakeResult() {
 
-        //this.classify()
+        this.classify()
 
         let max = 100;
 
@@ -49,23 +51,24 @@ export class MapPage extends React.Component {
         scoreDiv.innerHTML = `Score: ${score}/${100 * 86}`
     }
 
-    classify(){
-        let mapContainer = document.getElementsByTagName("img")[0]
-        this.classifier.classify(mapContainer,()=> this.gotResult)
-        
-    }
-
-    gotResult(error, results){
-        console.log(results)
+    async classify() {
+        let mapContainer = document.getElementById("testImg")
+        await this.classifier.classify(mapContainer, (err, res) => {
+            if (!err) {
+                console.log(res)
+            } else {
+                console.log(err)
+            }
+        })
     }
 
     render() {
         return (
             <div className="d-flex flex-row">
                 <div>
-                    <Map/>
-                    <img src={PicImg}></img>
-                <button onClick={() => this.fakeResult()} className="testButton btn btn-success">CALCULATE</button>
+                    <Map />
+                    <img id="testImg" src={PicImg}></img>
+                    <button onClick={() => this.fakeResult()} className="testButton btn btn-success">CALCULATE</button>
                 </div>
                 <div className="scoreBoard">
                     <h1>Screen Green Machine</h1>
