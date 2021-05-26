@@ -56,11 +56,12 @@ p {
     border: 0.2px solid #284e58;
     border-radius: 5px;
     color: rgb(97, 97, 97);
-    padding: 10px 32px;
+    padding: 0.5%;
     margin: 10px 7.5px 10px 7.5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    width: 10%;
     font-size: 16px;
     cursor: pointer;
     transition: 0.5s;
@@ -84,22 +85,31 @@ p {
 }
 .member{
   background-color: #74A343;
-  width: 300px;
-  margin: 5px;
+  color: #000;
+  width: 270px;
+  margin: 10px;
   margin-bottom: 36px;
-  padding: 10px;
+  padding-bottom: 0px;
+  padding-top : 10px;
   border-radius: 20px;
+  box-shadow: 5px 8px rgba(7, 129, 17, 0.904);
 }
 .member a{
   font-size: 25px;
-  text-decoration: underline;
+  text-decoration: none;
   color: black;
   cursor: pointer;
-  transition: font-size 400ms;
+  transition: font-size 50ms;
 }
 .member a:hover{
-  font-size: 26px;
-  transition: font-size 400ms;
+  font-size: 28px;
+  transition: font-size 300ms;
+}
+.contactTitle{
+  font-size: 0.8em;
+}
+.contactText{
+  font-size: 0.7em;
 }
 
 .groupphoto{  
@@ -118,6 +128,7 @@ p {
 }
 
 .scoreBoard {
+  position: relative;
   background-color: #fff8b5;
   width: 100%;
   height: auto;
@@ -184,6 +195,9 @@ p {
   padding: 5px;
   border: black 2px solid;
   transition: padding 200ms;
+}
+.phonenavclass {
+  display: none;
 }
 
 .homeBtn:hover {
@@ -269,4 +283,54 @@ text-align: center;
 }
 .yellowbar{
   width: 100%;
+}
+
+/* Phone view */
+
+@media only screen and (max-width: 568px){
+
+.homephoto{
+  display:none!important;
+}
+.groupphoto{
+  display: none;
+}
+.member{
+  width: 100%;
+}
+.member-container{
+  width: 100%;
+}
+
+.uitlegDiv {
+  margin-top:40px!important;
+  width: 100%;
+}
+
+.mapBtn{
+  margin-top:30px!important;
+}
+.nav-button{
+  width: 90%;
+  padding: 10%;
+}
+
+.infoDiv {
+  width: 100%;
+}
+
+.teamDiv{
+  min-height: 0vh!important;
+}
+
+.navclass{
+  display: none;
+}
+.phonenavclass{
+  display: block;
+}
+.Title, .Mapscore{
+  font-size: 1em;
+}
+
 }

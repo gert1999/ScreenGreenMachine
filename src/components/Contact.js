@@ -19,25 +19,36 @@ export class Contact extends React.Component {
             <div className="main">
                 <div className="team-container">
                     <div className="member-container"> 
+
                         <div className="member">
-                            <a href="https://www.linkedin.com/in/daphne-bruggeman-6306316b/">Daphne Bruggeman</a>
-                            <p>Onderzoekend technoloog</p>
+                            <a href="https://www.linkedin.com/in/daphne-bruggeman-6306316b/" >
+                                <p className = "contactTitle"><b>Daphne Bruggeman</b></p>
+                                <p className = "contactText">Onderzoekend technoloog</p>
+                            </a>
                         </div>
                         <div className="member">
-                            <a href="https://www.linkedin.com/in/marc-van-der-made-b15914193/">Marc van der Made</a>
-                            <p>Onderzoekend technoloog</p>
+                            <a href="https://www.linkedin.com/in/marc-van-der-made-b15914193/" >
+                                <p className = "contactTitle"><b>Marc van der Made</b></p>
+                                <p className = "contactText">Onderzoekend technoloog</p>
+                            </a>
                         </div>
                         <div className="member">
-                            <a href="https://www.linkedin.com/in/quincy-van-der-sluis-863438156/">Quincy van der Sluis</a>
-                            <p>Betrokken technoloog</p>
+                            <a href="https://www.linkedin.com/in/quincy-van-der-sluis-863438156/" >
+                                <p className = "contactTitle"><b>Quincy van der Sluis</b></p>
+                                <p className = "contactText">Betrokken technoloog</p>
+                            </a>
                         </div>
                         <div className="member">
-                            <a href="https://www.linkedin.com/in/luuk-s-gravendijk-b9379219a/">Luuk 's Gravendijk</a>
-                            <p>Ontwerpend technoloog</p>
+                            <a href="https://www.linkedin.com/in/luuk-s-gravendijk-b9379219a/" >
+                                <p className = "contactTitle"><b>Luuk 's Gravendijk</b></p>
+                                <p className = "contactText">Ontwerpend technoloog</p>
+                            </a>
                         </div>
                         <div className="member">
-                            <a href="https://www.linkedin.com/in/gertjan-e-a875a912b/">Gertjan Egas</a>
-                            <p>Ondernemend technoloog</p>
+                            <a href="https://www.linkedin.com/in/gertjan-e-a875a912b/" >
+                                <p className = "contactTitle"><b>Gertjan Egas</b></p>
+                                <p className = "contactText">Ondernemend technoloog</p>
+                            </a>
                         </div>
                     </div>
 
