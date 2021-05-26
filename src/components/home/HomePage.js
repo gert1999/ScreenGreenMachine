@@ -9,7 +9,6 @@ import { InfoDivs } from "./InfoDivs";
 export class HomePage extends React.Component {
     constructor(){
         super()
-        console.log("Test")
     }
 
     showMoreInfo(){
