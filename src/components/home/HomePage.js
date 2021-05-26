@@ -7,6 +7,17 @@ import { InfoDivs } from "./InfoDivs";
 // import Map from "../Map";
 
 export class HomePage extends React.Component {
+    constructor(){
+        super()
+        console.log("Test")
+    }
+
+    showMoreInfo(){
+        let info=document.getElementById('info');
+                info.scrollIntoView({
+                    behavior:'smooth'
+                })
+    }
     render() {
         return (
             <div className="homeWrapper">
@@ -24,6 +35,7 @@ export class HomePage extends React.Component {
                             er het beste nog meer groen moet
                             komen.
                             </p>
+                            <button className="homeBtn" id="more_info" onClick={this.showMoreInfo}>↓</button>
                     </div>
                 </div>
                 <TeamHome />

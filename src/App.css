@@ -193,6 +193,16 @@ p {
   text-decoration: none;
 }
 
+#more_info{
+  margin: 0 auto;
+  display: block;
+  font-size: xx-large;
+  border: black 1.5px solid;
+  margin-top: 20px;
+  background-color: #9BBD77;
+  padding: 0px 15px 0px 15px
+}
+
 .homephoto {
   position: relative;
   margin: auto;

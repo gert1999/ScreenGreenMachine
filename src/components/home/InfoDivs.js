@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export class InfoDivs extends React.Component {
     render() {
         return (
-            <div className="infoWrapper">
+            <div className="infoWrapper" id="info">
                 <div className="infoDiv">
                     <h2>Ontvang updates</h2>
                     <div>
