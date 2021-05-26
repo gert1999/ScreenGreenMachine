@@ -10,7 +10,7 @@ export class MapPage extends React.Component {
     constructor() {
         super()
         console.log("constructor")
-        this.classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/rMNYFk_ka/model.json", (err, res) => {
+        this.classifier = ml5.imageClassifier("https://storage.googleapis.com/tm-model/xLBZPJD5G/model.json", (err, res) => {
             if (!err) {
                 console.log("model loaded")
             } else {
