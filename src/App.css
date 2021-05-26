@@ -231,8 +231,22 @@ p {
   padding: 20px;
 }
 
+.large-width {
+  width: 80%;
+    /* background-color: #9BBD77; */
+    border: none;
+    /* border-radius: 20px; */
+    padding: 20px;
+}
+
 .infoWrapper h2 {
   text-decoration: underline;
+}
+
+.LoginDiv{
+  margin-left: auto;
+  margin-right: auto;
+text-align: center;
 }
 
 .infoWrapper div div {
