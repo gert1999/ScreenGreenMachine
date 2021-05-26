@@ -9,6 +9,7 @@ import { HomePage } from './components/home/HomePage';
 import { Footer } from './components/Footer';
 import { MapPage } from "./components/MapPage";
 import { Contact } from './components/Contact';
+import { Login } from './components/Login';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/" component={ HomePage }/>
         <Route path="/contact" component={ Contact }/>
         <Route path="/map" component={ MapPage }/>
+        <Route path="/login" component={ Login}/>
       </Switch>
       </div>
       <Footer />
