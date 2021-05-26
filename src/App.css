@@ -246,3 +246,7 @@ p {
 .yellowbar{
   width: 100%;
 }
+
+#testImg {
+  display: block;
+}

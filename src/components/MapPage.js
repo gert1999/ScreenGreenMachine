@@ -17,7 +17,18 @@ export class MapPage extends React.Component {
                 console.log(err)
             }
         });
+
+        // let gc;
+        // let ctx;
+        // this.init()
     }
+
+    // init() {
+    //     let mapCanvas = document.getElementsByClassName("mapboxgl-canvas")[0];
+    //     let ctx = mapCanvas.getContext('2d');
+
+    //     ctx.strokeStyle = "black";
+    // }
 
     // fakeResult() {
 
@@ -48,17 +59,47 @@ export class MapPage extends React.Component {
     //     scoreDiv.innerHTML = `Score: ${score}/${100 * 86}`
     // }
 
-    async classify() {
+    mapboxToImg() {
         let photoDiv = document.getElementById("testImg");
+
         let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
 
         const dataURI = mapContainer.toDataURL();
-        // console.log(dataURI)
         photoDiv.src = dataURI
 
+        this.classify()
+    }
 
+    async classify() {
+        let photoDiv = document.getElementById("testImg");
+        let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
+        // this.gc = document.getElementById("gridCanvas");
+        // let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
 
-        await this.classifier.classify(photoDiv, (err, res) => {
+        // const dataURI = mapContainer.toDataURL();
+        // photoDiv.src = dataURI
+
+        // this.ctx = this.gc.getContext("2d");
+        // this.ctx.clearRect(0, 0, this.gc.width, this.gc.height)
+        // console.log(this.gc)
+
+        // let x = 0;
+        // let y = 0;
+
+        // console.log(dataURI)
+
+        // for (let i = 0; i < 10; i++) {
+        //     for (let j = 0; j < 10; j++) {
+
+        //         x = i * 40
+        //         y = j * 40
+
+        //         this.ctx.drawImage(photoDiv, x, y, 40, 40, x+i*5, y+j * 5, 40, 40)
+                
+        //     }  
+        // }
+
+        await this.classifier.classify(mapContainer, (err, res) => {
             if (!err) {
                 console.log(res)
             } else {
@@ -73,7 +114,8 @@ export class MapPage extends React.Component {
                 <div>
                     <Map />
                     <img id="testImg" src={PicImg}></img>
-                    <button onClick={() => this.classify()} className="testButton btn btn-success">CALCULATE</button>
+                    <canvas id="gridCanvas"></canvas>
+                    <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">CALCULATE</button>
                 </div>
                 <div className="scoreBoard">
                     <h1>Screen Green Machine</h1>
