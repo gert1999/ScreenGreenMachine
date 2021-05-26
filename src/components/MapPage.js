@@ -5,7 +5,6 @@ import * as ml5 from "ml5";
 // import model from "../model/model.json"
 import PicImg from "../img/groupphoto.jpeg";
 
-
 export class MapPage extends React.Component {
 
     constructor() {
@@ -20,40 +19,46 @@ export class MapPage extends React.Component {
         });
     }
 
-    fakeResult() {
+    // fakeResult() {
 
-        this.classify()
+    //     let max = 100;
 
-        let max = 100;
+    //     let greenResult = Math.floor(Math.random() * max);
+    //     max = max - greenResult
+    //     let blueResult = Math.floor(Math.random() * max);
+    //     max = max - blueResult
+    //     let yellowResult = max;
 
-        let greenResult = Math.floor(Math.random() * max);
-        max = max - greenResult
-        let blueResult = Math.floor(Math.random() * max);
-        max = max - blueResult
-        let yellowResult = max;
+    //     let greenBar = document.getElementsByClassName("greenbar")[0];
+    //     let blueBar = document.getElementsByClassName("bluebar")[0];
+    //     let yellowBar = document.getElementsByClassName("yellowbar")[0];
 
-        let greenBar = document.getElementsByClassName("greenbar")[0];
-        let blueBar = document.getElementsByClassName("bluebar")[0];
-        let yellowBar = document.getElementsByClassName("yellowbar")[0];
+    //     greenBar.innerHTML = `${greenResult}%`;
+    //     greenBar.style.width = `${greenResult}%`;
 
-        greenBar.innerHTML = `${greenResult}%`;
-        greenBar.style.width = `${greenResult}%`;
+    //     blueBar.innerHTML = `${blueResult}%`;
+    //     blueBar.style.width = `${blueResult}%`;
 
-        blueBar.innerHTML = `${blueResult}%`;
-        blueBar.style.width = `${blueResult}%`;
+    //     yellowBar.innerHTML = `${yellowResult}%`;
+    //     yellowBar.style.width = `${yellowResult}%`;
 
-        yellowBar.innerHTML = `${yellowResult}%`;
-        yellowBar.style.width = `${yellowResult}%`;
+    //     let scoreDiv = document.getElementsByClassName("Mapscore")[0];
+    //     let score = greenResult * 86
 
-        let scoreDiv = document.getElementsByClassName("Mapscore")[0];
-        let score = greenResult * 86
-
-        scoreDiv.innerHTML = `Score: ${score}/${100 * 86}`
-    }
+    //     scoreDiv.innerHTML = `Score: ${score}/${100 * 86}`
+    // }
 
     async classify() {
-        let mapContainer = document.getElementById("testImg")
-        await this.classifier.classify(mapContainer, (err, res) => {
+        let photoDiv = document.getElementById("testImg");
+        let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
+
+        const dataURI = mapContainer.toDataURL();
+        // console.log(dataURI)
+        photoDiv.src = dataURI
+
+
+
+        await this.classifier.classify(photoDiv, (err, res) => {
             if (!err) {
                 console.log(res)
             } else {
@@ -68,7 +73,7 @@ export class MapPage extends React.Component {
                 <div>
                     <Map />
                     <img id="testImg" src={PicImg}></img>
-                    <button onClick={() => this.fakeResult()} className="testButton btn btn-success">CALCULATE</button>
+                    <button onClick={() => this.classify()} className="testButton btn btn-success">CALCULATE</button>
                 </div>
                 <div className="scoreBoard">
                     <h1>Screen Green Machine</h1>
