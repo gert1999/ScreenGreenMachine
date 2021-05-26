@@ -14,7 +14,7 @@ export class InfoDivs extends React.Component {
                             uw buurt. Registreer dan en
                             meld u aan voor de newsbrief.
                     </p>
-                        <Link to="/register" className="homeBtn">Registreren</Link>
+                        <Link to="/login" className="homeBtn">Registreren</Link>
                     </div>
                 </div>
                 <div className="infoDiv">
