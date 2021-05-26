@@ -126,10 +126,7 @@ p {
 }
 
 .testButton{
-  position: absolute;
-  top: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .homeWrapper {
@@ -258,6 +255,15 @@ p {
 
 .homephoto{
   display:none!important;
+}
+.map{
+  width: 100vw;
+}
+
+.mappage-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .uitlegDiv {

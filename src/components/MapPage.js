@@ -33,11 +33,13 @@ export class MapPage extends React.Component {
 
     render() {
         return (
-            <div className="d-flex flex-row">
+            <div className="d-flex flex-row mappage-wrapper">
+
                 <div>
                     <Map/>
                 <button onClick={() => this.fakeResult()} className="testButton btn btn-success">CALCULATE</button>
                 </div>
+
                 <div className="scoreBoard">
                     <h1 class="Title">Screen Green Machine</h1>
                     <label>Hoeveelheid groen:</label>
@@ -55,6 +57,7 @@ export class MapPage extends React.Component {
                     <br></br>
                     <h3 className="Mapscore">Score: Not scanned</h3>
                 </div>
+
             </div>
         )
     }
