@@ -19,17 +19,7 @@ export class MapPage extends React.Component {
             }
         });
 
-        // let gc;
-        // let ctx;
-        // this.init()
     }
-
-    // init() {
-    //     let mapCanvas = document.getElementsByClassName("mapboxgl-canvas")[0];
-    //     let ctx = mapCanvas.getContext('2d');
-
-    //     ctx.strokeStyle = "black";
-    // }
 
     // fakeResult() {
 
@@ -103,9 +93,18 @@ export class MapPage extends React.Component {
     //     return div
     // }
 
-    async classify(photoDiv) {
+    // async classify(photoDiv) {
         // let photoDiv = document.getElementById("testImg");
         // let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
+    async classify() {
+        let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
+
+            let grassBar = document.getElementsByClassName("grassbar")[0];
+            let treesBar = document.getElementsByClassName("treesbar")[0];
+            let waterBar = document.getElementsByClassName("waterbar")[0];
+            let buildingBar = document.getElementsByClassName("buildingbar")[0];
+            let roadBar = document.getElementsByClassName("roadbar")[0];
+
         // this.gc = document.getElementById("gridCanvas");
         // let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
 
@@ -128,13 +127,34 @@ export class MapPage extends React.Component {
         //         y = j * 40
 
         //         this.ctx.drawImage(photoDiv, x, y, 40, 40, x+i*5, y+j * 5, 40, 40)
-                
+
         //     }  
         // }
 
         await this.classifier.classify(photoDiv, (err, res) => {
             if (!err) {
                 console.log(res)
+
+                // check which label the result has and assign to the right bar
+                for (let r of res) {
+                    if (r.label === "Grass") {
+                        grassBar.style.width = `${Math.ceil(r.confidence * 100)}%`
+                        grassBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
+                    } else if (r.label === "Trees") {
+                        treesBar.style.width = `${Math.ceil(r.confidence * 100)}%`
+                        treesBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
+                    } else if (r.label === "Water") {
+                        waterBar.style.width = `${Math.ceil(r.confidence * 100)}%`
+                        waterBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
+                    } else if (r.label === "Buildings") {
+                        buildingBar.style.width = `${Math.ceil(r.confidence * 100)}%`
+                        buildingBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
+                    } else if (r.label === "Roads") {
+                        roadBar.style.width = `${Math.ceil(r.confidence * 100)}%`
+                        roadBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
+                    }
+                }
+
             } else {
                 console.log(err)
             }
@@ -146,24 +166,32 @@ export class MapPage extends React.Component {
             <div className="d-flex flex-row">
                 <div>
                     <Map />
-                    <img id="testImg" className="preview" alt="preview of screenshot"></img>
+                    <img id="testImg" src={PicImg} className="preview" alt="preview of screenshot"></img>
                     <div id="image-wrapper"></div>
                     <canvas id="gridCanvas"></canvas>
                     <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">Bereken</button>
                 </div>
                 <div className="scoreBoard">
                     <h1>Screen Green Machine</h1>
-                    <label>Hoeveelheid groen:</label>
+                    <label>vertrouwen dat het gras is</label>
                     <div className="progress barholder">
-                        <div className="progress-bar bg-success greenbar" role="greenbar">Nog niet berekend</div>
+                        <div className="progress-bar bg-success grassbar" role="grassbar">Nog niet berekend</div>
                     </div>
-                    <label>Hoeveelheid water:</label>
+                    <label>vertrouwen dat het bomen zijn</label>
                     <div className="progress barholder">
-                        <div className="progress-bar bg-info bluebar" role="bluebar">Nog niet berekend</div>
+                        <div className="progress-bar bg-danger treesbar" role="treesbar">Nog niet berekend</div>
                     </div>
-                    <label>Hoeveelheid gebouwen:</label>
+                    <label>vertrouwen dat het water is</label>
                     <div className="progress barholder">
-                        <div className="progress-bar bg-warning yellowbar" role="yellowbar">Nog niet berekend</div>
+                        <div className="progress-bar bg-info waterbar" role="waterbar">Nog niet berekend</div>
+                    </div>
+                    <label>vertrouwen dat het gebouwen zijn</label>
+                    <div className="progress barholder">
+                        <div className="progress-bar bg-warning buildingbar" role="buildingbar">Nog niet berekend</div>
+                    </div>
+                    <label>vertrouwen dat het wegen zijn</label>
+                    <div className="progress barholder">
+                        <div className="progress-bar roadbar" role="roadbar">Nog niet berekend</div>
                     </div>
                     <br></br>
                     <h3 className="Mapscore">Score: Nog niet berekend</h3>

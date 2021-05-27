@@ -237,14 +237,25 @@ p {
   margin-right: 5px;
 }
 
-.greenbar{
+.grassbar{
   width: 100%;
+  background-color: green !important;
 }
-.bluebar{
+.treesbar{
   width: 100%;
+  background-color: darkgreen !important;
 }
-.yellowbar{
+.waterbar{
   width: 100%;
+  background-color: blue !important;
+}
+.buildingbar{
+  width: 100%;
+  background-color: darkgray !important;
+}
+.roadbar {
+  width: 100%;
+  background-color: darkslategray !important;
 }
 
 #testImg {
@@ -255,4 +266,7 @@ p {
   float: left;
   border: 1px solid black;
   box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+  border: 3px solid black;
 }
