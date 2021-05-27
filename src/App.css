@@ -239,18 +239,23 @@ p {
 
 .grassbar{
   width: 100%;
+  background-color: green !important;
 }
 .treesbar{
   width: 100%;
+  background-color: darkgreen !important;
 }
 .waterbar{
   width: 100%;
+  background-color: blue !important;
 }
 .buildingbar{
   width: 100%;
+  background-color: darkgray !important;
 }
 .roadbar {
   width: 100%;
+  background-color: darkslategray !important;
 }
 
 #testImg {
