@@ -237,16 +237,25 @@ p {
   margin-right: 5px;
 }
 
-.greenbar{
+.grassbar{
   width: 100%;
 }
-.bluebar{
+.treesbar{
   width: 100%;
 }
-.yellowbar{
+.waterbar{
+  width: 100%;
+}
+.buildingbar{
+  width: 100%;
+}
+.roadbar {
   width: 100%;
 }
 
 #testImg {
   display: block;
+  width: 100%;
+  margin-top: 10px;
+  border: 3px solid black;
 }
