@@ -101,19 +101,19 @@ export class MapPage extends React.Component {
 
                 // check which label the result has and assign to the right bar
                 for (let r of res) {
-                    if (r.label == "Grass") {
+                    if (r.label === "Grass") {
                         grassBar.style.width = `${Math.ceil(r.confidence * 100)}%`
                         grassBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
-                    } else if (r.label =="Trees") {
+                    } else if (r.label === "Trees") {
                         treesBar.style.width = `${Math.ceil(r.confidence * 100)}%`
                         treesBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
-                    } else if (r.label =="Water") {
+                    } else if (r.label === "Water") {
                         waterBar.style.width = `${Math.ceil(r.confidence * 100)}%`
                         waterBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
-                    } else if (r.label =="Buildings") {
+                    } else if (r.label === "Buildings") {
                         buildingBar.style.width = `${Math.ceil(r.confidence * 100)}%`
                         buildingBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
-                    } else if (r.label =="Roads") {
+                    } else if (r.label === "Roads") {
                         roadBar.style.width = `${Math.ceil(r.confidence * 100)}%`
                         roadBar.innerHTML = `${Math.floor(r.confidence * 100)}%`
                     }
@@ -130,7 +130,7 @@ export class MapPage extends React.Component {
             <div className="d-flex flex-row">
                 <div>
                     <Map />
-                    <img id="testImg" src={PicImg}></img>
+                    <img id="testImg" src={PicImg} alt="test"></img>
                     <canvas id="gridCanvas"></canvas>
                     <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">CALCULATE</button>
                 </div>
