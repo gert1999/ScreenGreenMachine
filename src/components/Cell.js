@@ -8,25 +8,26 @@ export default class Cell {
     }
 
     createDiv(){
-        const div = document.createElement('div');
+        const div = document.createElement('img');
         
         let blockWidth = this.img.width /this.img.dimension;
         let blockHeight = this.img.height /this.img.dimension;
         const left = blockWidth * (this.index % this.img.dimension);
         const top = blockHeight * (Math.floor(this.index / this.img.dimension));
 
-        div.style.backgroundImage = `url(${this.img.imageSrc})`;
+        // div.style.backgroundImage = `url(${this.img.imageSrc})`;
+        console.log(this.img.imageSrc.src);
+        div.src = this.img.imageSrc.src;
         div.style.backgroundSize = `${this.img.width}px ${this.img.height}px`;
         div.style.position = 'absolute'
         div.style.width = `${blockWidth}px`
         div.style.height = `${blockHeight}px`
 
-  
-
         div.style.left = `${left}px`;
         div.style.top = `${top}px`;
 
-        div.style.backgroundPosition = `-${left}px -${top}px`
+        // div.style.backgroundPositionX = `${left}px`
+        // div.style.backgroundPositionY = `${top}px`
 
         return div
     }

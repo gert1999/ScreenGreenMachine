@@ -1,9 +1,7 @@
 import React from "react";
 import Map from "./Map";
 import Picture from "./Picture"
-// import ScriptTag from "react-script-tag";
 import * as ml5 from "ml5";
-// import model from "../model/model.json"
 // import PicImg from "../img/groupphoto.jpeg";
 
 export class MapPage extends React.Component {
@@ -21,35 +19,6 @@ export class MapPage extends React.Component {
 
     }
 
-    // fakeResult() {
-
-    //     let max = 100;
-
-    //     let greenResult = Math.floor(Math.random() * max);
-    //     max = max - greenResult
-    //     let blueResult = Math.floor(Math.random() * max);
-    //     max = max - blueResult
-    //     let yellowResult = max;
-
-    //     let greenBar = document.getElementsByClassName("greenbar")[0];
-    //     let blueBar = document.getElementsByClassName("bluebar")[0];
-    //     let yellowBar = document.getElementsByClassName("yellowbar")[0];
-
-    //     greenBar.innerHTML = `${greenResult}%`;
-    //     greenBar.style.width = `${greenResult}%`;
-
-    //     blueBar.innerHTML = `${blueResult}%`;
-    //     blueBar.style.width = `${blueResult}%`;
-
-    //     yellowBar.innerHTML = `${yellowResult}%`;
-    //     yellowBar.style.width = `${yellowResult}%`;
-
-    //     let scoreDiv = document.getElementsByClassName("Mapscore")[0];
-    //     let score = greenResult * 86
-
-    //     scoreDiv.innerHTML = `Score: ${score}/${100 * 86}`
-    // }
-
     mapboxToImg() {
         let photoDiv = document.getElementById("testImg");
 
@@ -60,7 +29,7 @@ export class MapPage extends React.Component {
         
         const image = new Picture(document.querySelector('#image-wrapper'), photoDiv, 600);
         console.log(image)
-        // this.classify(photoDiv)
+        this.classify(photoDiv)
     }
 
     // imageCut(el, imageSrc, width) {
@@ -96,7 +65,7 @@ export class MapPage extends React.Component {
     // async classify(photoDiv) {
         // let photoDiv = document.getElementById("testImg");
         // let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
-    async classify() {
+    async classify(photoDiv) {
         let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
 
             let grassBar = document.getElementsByClassName("grassbar")[0];
@@ -166,7 +135,7 @@ export class MapPage extends React.Component {
             <div className="d-flex flex-row">
                 <div>
                     <Map />
-                    <img id="testImg" src={PicImg} className="preview" alt="preview of screenshot"></img>
+                    <img id="testImg" src="" className="preview" alt="preview of screenshot"></img>
                     <div id="image-wrapper"></div>
                     <canvas id="gridCanvas"></canvas>
                     <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">Bereken</button>
