@@ -1,9 +1,10 @@
 import React from "react";
 import Map from "./Map";
+import Picture from "./Picture"
 // import ScriptTag from "react-script-tag";
 import * as ml5 from "ml5";
 // import model from "../model/model.json"
-import PicImg from "../img/groupphoto.jpeg";
+// import PicImg from "../img/groupphoto.jpeg";
 
 export class MapPage extends React.Component {
 
@@ -66,13 +67,45 @@ export class MapPage extends React.Component {
 
         const dataURI = mapContainer.toDataURL();
         photoDiv.src = dataURI
-
-        this.classify()
+        
+        const image = new Picture(document.querySelector('#image-wrapper'), photoDiv, 600);
+        console.log(image)
+        // this.classify(photoDiv)
     }
 
-    async classify() {
-        let photoDiv = document.getElementById("testImg");
-        let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
+    // imageCut(el, imageSrc, width) {
+
+    //     this.parentEl = el;
+    //     this.dimension = 3;
+    //     this.imageSrc = imageSrc;
+    //     this.width = width;
+    //     this.cells = [];
+
+
+
+    //     this.el = this.createWrapper()
+    //     this.parentEl.appendChild(this.el)
+
+    //     console.log(imageSrc.width, imageSrc.height)
+    //     this.height = imageSrc.height * this.width / imageSrc.width
+    //     this.el.style.width = `${this.width}px`
+    //     this.el.style.height = `${this.height}px`
+
+    //     // setup
+    //     for (let i = 0; i < this.dimension * this.dimension; i++) {
+    //         this.cells.push(new Cell(this, i))
+            
+    //     }
+    // }
+
+    // createWrapper() {
+    //     const div = document.createElement('div')
+    //     return div
+    // }
+
+    async classify(photoDiv) {
+        // let photoDiv = document.getElementById("testImg");
+        // let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
         // this.gc = document.getElementById("gridCanvas");
         // let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
 
@@ -99,7 +132,7 @@ export class MapPage extends React.Component {
         //     }  
         // }
 
-        await this.classifier.classify(mapContainer, (err, res) => {
+        await this.classifier.classify(photoDiv, (err, res) => {
             if (!err) {
                 console.log(res)
             } else {
@@ -113,26 +146,27 @@ export class MapPage extends React.Component {
             <div className="d-flex flex-row">
                 <div>
                     <Map />
-                    <img id="testImg" src={PicImg}></img>
+                    <img id="testImg" className="preview" alt="preview of screenshot"></img>
+                    <div id="image-wrapper"></div>
                     <canvas id="gridCanvas"></canvas>
-                    <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">CALCULATE</button>
+                    <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">Bereken</button>
                 </div>
                 <div className="scoreBoard">
                     <h1>Screen Green Machine</h1>
                     <label>Hoeveelheid groen:</label>
                     <div className="progress barholder">
-                        <div className="progress-bar bg-success greenbar" role="greenbar">Not scanned</div>
+                        <div className="progress-bar bg-success greenbar" role="greenbar">Nog niet berekend</div>
                     </div>
                     <label>Hoeveelheid water:</label>
                     <div className="progress barholder">
-                        <div className="progress-bar bg-info bluebar" role="bluebar">Not scanned</div>
+                        <div className="progress-bar bg-info bluebar" role="bluebar">Nog niet berekend</div>
                     </div>
                     <label>Hoeveelheid gebouwen:</label>
                     <div className="progress barholder">
-                        <div className="progress-bar bg-warning yellowbar" role="yellowbar">Not scanned</div>
+                        <div className="progress-bar bg-warning yellowbar" role="yellowbar">Nog niet berekend</div>
                     </div>
                     <br></br>
-                    <h3 className="Mapscore">Score: Not scanned</h3>
+                    <h3 className="Mapscore">Score: Nog niet berekend</h3>
                 </div>
             </div>
         )

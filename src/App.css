@@ -250,3 +250,9 @@ p {
 #testImg {
   display: block;
 }
+
+.preview {
+  float: left;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
