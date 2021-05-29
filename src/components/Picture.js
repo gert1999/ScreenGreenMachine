@@ -1,8 +1,8 @@
 import Cell from "./Cell";
 
 export default class Picture {
-    constructor(el, imageSrc, width){
-
+    constructor(el, imageSrc, width, classifier){
+        this.classifier = classifier
         this.parentEl = el;
         this.dimension = 3;
         this.imageSrc = imageSrc;
@@ -11,16 +11,16 @@ export default class Picture {
 
         this.init()
         const img = new Image()
+        img.onload = () => {
+            console.log(img.width, img.height)
+    
+            this.height = img.height * this.width / img.width
+            this.el.style.width = `${this.width}px`
+            this.el.style.height = `${this.height}px`
+
+            this.setup();
+        }
         img.src = this.imageSrc
-        console.log(img.width, img.height)
-
-        this.height = img.height * this.width / img.width
-        this.el.style.width = `${this.width}px`
-        this.el.style.height = `${this.height}px`
-
-        this.setup();
-
-  
     }
 
     init() {
@@ -36,10 +36,8 @@ export default class Picture {
     }
 
     setup() {
-        console.log("test")
         for (let i = 0; i < this.dimension * this.dimension; i++) {
-            this.cells.push(new Cell(this, i))
+            this.cells.push(new Cell(this, i, this.classifier))
         }
     }
-
 }
