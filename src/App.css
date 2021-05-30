@@ -275,14 +275,17 @@ text-align: center;
   margin-right: 5px;
 }
 
-.greenbar{
+.grassbar{
   width: 100%;
+  background-color: green !important;
 }
-.bluebar{
+.treesbar{
   width: 100%;
+  background-color: darkgreen !important;
 }
-.yellowbar{
+.waterbar{
   width: 100%;
+  background-color: blue !important;
 }
 
 /* Phone view */
@@ -332,5 +335,25 @@ text-align: center;
 .Title, .Mapscore{
   font-size: 1em;
 }
+.buildingbar{
+  width: 100%;
+  background-color: darkgray !important;
+}
+.roadbar {
+  width: 100%;
+  background-color: darkslategray !important;
+}
 
+#testImg {
+  display: none;
+}
+
+.preview {
+  float: left;
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+  border: 3px solid black;
+}
 }
