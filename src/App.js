@@ -1,5 +1,5 @@
-import { BrowserRouter  as Router, Switch, Route, Link, } from "react-router-dom";
-import * as FaIcons from "react-icons/fa";
+import { BrowserRouter  as Router, Switch, Route } from "react-router-dom";
+// import * as FaIcons from "react-icons/fa";
 
 // import css
 import './App.css';

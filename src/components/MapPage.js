@@ -80,7 +80,7 @@ export class MapPage extends React.Component {
                 </div>
                 {/* <div id="image-wrapper"></div> */}
                 <div className="scoreBoard">
-                    <h1 class="Title">Screen Green Machine</h1>
+                    <h1 className="Title">Screen Green Machine</h1>
                     <label>vertrouwen dat het gras is</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-success grassbar" role="grassbar">Nog niet berekend</div>

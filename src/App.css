@@ -288,6 +288,20 @@ text-align: center;
   background-color: blue !important;
 }
 
+.buildingbar{
+  width: 100%;
+  background-color: darkgray !important;
+}
+.roadbar {
+  width: 100%;
+  background-color: darkslategray !important;
+}
+
+#testImg {
+  display: none;
+}
+
+
 /* Phone view */
 
 @media only screen and (max-width: 568px){
@@ -334,18 +348,6 @@ text-align: center;
 }
 .Title, .Mapscore{
   font-size: 1em;
-}
-.buildingbar{
-  width: 100%;
-  background-color: darkgray !important;
-}
-.roadbar {
-  width: 100%;
-  background-color: darkslategray !important;
-}
-
-#testImg {
-  display: none;
 }
 
 .preview {
