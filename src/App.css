@@ -309,7 +309,7 @@ text-align: center;
 
 /* Phone view */
 
-@media only screen and (max-width: 568px){
+@media only screen and (max-width: 1450px){
 
 .homephoto{
   display:none!important;
