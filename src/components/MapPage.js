@@ -71,7 +71,8 @@ export class MapPage extends React.Component {
 
     render() {
         return (
-            <div className="d-flex flex-row">
+            <div className="d-flex flex-row mappage-wrapper">
+
                 <div>
                     <Map />
                     <img id="testImg" src="" className="preview" alt="preview of screenshot"></img>
@@ -79,6 +80,7 @@ export class MapPage extends React.Component {
                     <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">Bereken</button>
                 </div>
                 {/* <div id="image-wrapper"></div> */}
+
                 <div className="scoreBoard">
                     <h1 className="Title">Screen Green Machine</h1>
                     <label>vertrouwen dat het gras is</label>
@@ -104,6 +106,7 @@ export class MapPage extends React.Component {
                     <br></br>
                     <h3 className="Mapscore">Score: Nog niet berekend</h3>
                 </div>
+
             </div>
         )
     }

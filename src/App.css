@@ -135,10 +135,7 @@ p {
 }
 
 .testButton{
-  position: absolute;
-  top: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .homeWrapper {
@@ -308,6 +305,15 @@ text-align: center;
 
 .homephoto{
   display:none!important;
+}
+.map{
+  width: 100vw;
+}
+
+.mappage-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .groupphoto{
   display: none;
