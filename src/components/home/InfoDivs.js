@@ -12,7 +12,7 @@ export class InfoDivs extends React.Component {
                             Wilt u updates krijgen van
                             aanpassingen over groen in
                             uw buurt. Registreer dan en
-                            meld u aan voor de newsbrief.
+                            meld u aan voor de nieuwsbrief.
                     </p>
                         <Link to="/login" className="homeBtn">Registreren</Link>
                     </div>
@@ -37,7 +37,7 @@ export class InfoDivs extends React.Component {
                         <p>
                             De applicatie maakt gebruik
                             van AI. Deze herkent groen
-                            en raad dan andere plaatsen
+                            en raadt dan andere plaatsen
                             aan om groen te planten.
                     </p>
                     </div>

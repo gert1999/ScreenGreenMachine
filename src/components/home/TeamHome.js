@@ -10,7 +10,7 @@ export class TeamHome extends React.Component {
                         <h2>Ons team</h2>
                         <p>
                             Wij zijn het team dat deze
-                            Super coole applicatie heeft
+                            innovatieve applicatie heeft
                             gemaakt. Wil je meer over ons
                             weten klik dan op de knop
                             hieronder.
