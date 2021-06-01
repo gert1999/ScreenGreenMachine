@@ -3,7 +3,8 @@ export default class Cell {
         this.classifier = classifier
         this.index = ind
         this.img = img;
-        this.el = this.createDiv();
+        // this.el = this.createDiv();
+        this.el = this.createCanvas();
         img.el.appendChild(this.el)
         // Calling the classify function in Cell, because I couldn't get it to work in MapPage.js
         // this.classify()
@@ -20,6 +21,36 @@ export default class Cell {
         // })
 
 
+    }
+
+    createCanvas(){
+        let canvas = document.createElement("canvas")
+        let ctx = canvas.getContext("2d");
+        // let image = document.getElementById("testImg")
+        // canvas.style.position = 'relative'
+        let blockWidth = this.img.clientRectWidth / this.img.dimension;
+        let blockHeight = this.img.clientRectHeight / this.img.dimension
+
+        canvas.width = blockWidth
+        canvas.height = blockHeight
+
+        const left = blockWidth * (this.index % this.img.dimension);
+        const top = blockHeight * (Math.floor(this.index / this.img.dimension));
+        console.log(left, top)
+        console.log(blockWidth, blockHeight)
+        console.log(this.img.imageSrc)
+        // image.onload = () => {
+    
+            // ctx.fillStyle = "black";
+            // ctx.fillRect(0, 0, 200, 200);
+            // console.log(image)
+            ctx.drawImage(this.img.imageSrc, left, top, blockWidth, blockHeight, 0, 0, blockWidth, blockHeight)
+            console.log(ctx)
+            // let imageData = ctx.getImageData(left, top ,blockWidth, blockHeight)
+            // ctx.putImageData(imageData, left, top)
+         
+        // }
+        return canvas
     }
 
     createDiv(){

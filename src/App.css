@@ -303,9 +303,13 @@ text-align: center;
 }
 
 #testImg {
-  display: none;
+  /* display: none; */
 }
 
+canvas {
+  border: none;
+  /* display: block; */
+}
 
 /* Phone view */
 

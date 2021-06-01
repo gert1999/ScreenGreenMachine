@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createElement } from "react";
 import Map from "./Map";
 import * as ml5 from "ml5";
 import Picture from "./Picture"
@@ -23,14 +23,23 @@ export class MapPage extends React.Component {
         let photoDiv = document.getElementById("testImg");
 
         let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
+        console.log(mapContainer)
+        let wrapper = document.querySelector('#image-wrapper')
         // getImageData
+        // let newcanvas = document.createElement("canvas")
+        // let ctx = newcanvas.getContext("2d");
+        // newcanvas.width = mapContainer.width
+        // newcanvas.height = mapContainer.height
+        // ctx.drawImage(mapContainer, 0, 0)
+        // wrapper.appendChild(newcanvas)
 
-        const dataURI = mapContainer.toDataURL();
-        photoDiv.src = dataURI
-        
-        // let image = new Picture(document.querySelector('#image-wrapper'), photoDiv.src, 600, this.classifier);
+        // console.log(mapContainer)
+        // const dataURI = mapContainer.toDataURL();
+        // photoDiv.src = dataURI
+
+        let image = new Picture(document.querySelector('#image-wrapper'), mapContainer, 900, this.classifier);
         // console.log(Object.keys(image)) 
-        // console.log(image.cells)
+        console.log(wrapper)
         this.classify(photoDiv)
     }
 

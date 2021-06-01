@@ -8,19 +8,24 @@ export default class Picture {
         this.imageSrc = imageSrc;
         this.width = width;
         this.cells = [];
-
         this.init()
-        const img = new Image()
-        img.onload = () => {
-            console.log(img.width, img.height)
+        // const img = new Image()
+        // img.onload = () => {
+            console.log(this.imageSrc.width, this.imageSrc.height)
+            console.log(this.imageSrc.getBoundingClientRect().width, this.imageSrc.getBoundingClientRect().height)
     
-            this.height = img.height * this.width / img.width
-            this.el.style.width = `${this.width}px`
-            this.el.style.height = `${this.height}px`
+            this.clientRectWidth = this.imageSrc.getBoundingClientRect().width
+            this.clientRectHeight = this.imageSrc.getBoundingClientRect().height
+            this.height = this.clientRectHeight * this.width / this.clientRectWidth
+
+            console.log(this.width, this.height)
+
+            this.el.style.width = `${this.clientRectWidth}px`
+            this.el.style.height = `${this.clientRectHeight}px`
 
             this.setup();
-        }
-        img.src = this.imageSrc
+        // }
+        // img.src = this.imageSrc
     }
 
     init() {
