@@ -103,8 +103,6 @@ export class MapPage extends React.Component {
                     <div className="progress barholder">
                         <div className="progress-bar roadbar" role="roadbar">Nog niet berekend</div>
                     </div>
-                    <br></br>
-                    <h3 className="Mapscore">Score: Nog niet berekend</h3>
                 </div>
 
             </div>
