@@ -242,10 +242,18 @@ p {
   padding: 20px;
 }
 
+.Title, .Mapscore{
+  padding-bottom: 4vh;
+}
+
 .barholder{
-  height: 30px;
+  height: 50px;
   margin-left: 5px;
   margin-right: 5px;
+  margin-bottom: 4vh;
+}
+.textbar{
+  font-size: 1.5em;
 }
 
 .greenbar{
@@ -312,7 +320,8 @@ p {
   display: block;
 }
 .Title, .Mapscore{
-  font-size: 1em;
+  padding-top: 5vh;
+  font-size: 2em;
 }
 
 }

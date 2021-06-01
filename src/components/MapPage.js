@@ -42,15 +42,15 @@ export class MapPage extends React.Component {
 
                 <div className="scoreBoard">
                     <h1 class="Title">Screen Green Machine</h1>
-                    <label>Hoeveelheid groen:</label>
+                    <label className="textbar">Hoeveelheid groen:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-success greenbar" role="greenbar">Not scanned</div>
                     </div>
-                    <label>Hoeveelheid water:</label>
+                    <label className="textbar">Hoeveelheid water:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-info bluebar" role="bluebar">Not scanned</div>
                     </div>
-                    <label>Hoeveelheid gebouwen:</label>
+                    <label className="textbar">Hoeveelheid gebouwen:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-warning yellowbar" role="yellowbar">Not scanned</div>
                     </div>
