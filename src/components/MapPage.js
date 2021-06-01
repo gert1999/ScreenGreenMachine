@@ -39,8 +39,18 @@ export class MapPage extends React.Component {
 
         let image = new Picture(document.querySelector('#image-wrapper'), mapContainer, 900, this.classifier);
         // console.log(Object.keys(image)) 
+
+
+        for (let i = 0; i < image.cells.length; i++) {
+            console.log(image.cells[i].el)
+            let newimage = image.cells[i].el.toDataURL();
+            let imgElement = document.createElement("img")
+            imgElement.src = newimage
+            console.log(imgElement)
+            this.classify(imgElement)
+        }
         console.log(wrapper)
-        this.classify(photoDiv)
+        // this.classify(photoDiv)
     }
 
     async classify(photoDiv) {
