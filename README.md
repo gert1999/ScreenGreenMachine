@@ -12,5 +12,12 @@ De volgende mensen hebben meegewerkt aan dit project:
 - Daphne Bruggeman
 
 ## Installatie
+
+1. Download deze repositorie op je locale computer.
+2. Open het project in Visual Studio Code.
+3. Open in Visual Studio Code de Terminal en typ als eerste "npm install".
+4. Vervolgens als de terminal klaar is met installeren, typt je "npm start".
+5. Dit kan even duren. Hij opent als hij klaar is met builden automatisch een venster waar de applicatie op verschijnt.
+
 ## Software
 React.js
