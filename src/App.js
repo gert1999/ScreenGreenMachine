@@ -11,8 +11,8 @@ import { Footer } from './components/Footer';
 import { MapPage } from "./components/MapPage";
 import { Contact } from './components/Contact';
 import { Login } from './components/Login';
-import { Nav } from './components/Nav'
-import { PhoneNav } from './components/PhoneNav'
+import { Nav } from './components/Nav';
+import { PhoneNav } from './components/PhoneNav';
 
 
 function App() {

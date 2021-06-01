@@ -306,6 +306,26 @@ text-align: center;
   display: none;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: #9BBD77;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #74A343;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #74A343;
+}
 
 /* Phone view */
 
