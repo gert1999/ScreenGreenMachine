@@ -83,23 +83,23 @@ export class MapPage extends React.Component {
 
                 <div className="scoreBoard">
                     <h1 className="Title">Screen Green Machine</h1>
-                    <label>vertrouwen dat het gras is</label>
+                    <label>vertrouwen dat het gras is:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-success grassbar" role="grassbar">Nog niet berekend</div>
                     </div>
-                    <label>vertrouwen dat het bomen zijn</label>
+                    <label>vertrouwen dat het bomen zijn:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-danger treesbar" role="treesbar">Nog niet berekend</div>
                     </div>
-                    <label>vertrouwen dat het water is</label>
+                    <label>vertrouwen dat het water is:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-info waterbar" role="waterbar">Nog niet berekend</div>
                     </div>
-                    <label>vertrouwen dat het gebouwen zijn</label>
+                    <label>vertrouwen dat het gebouwen zijn:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-warning buildingbar" role="buildingbar">Nog niet berekend</div>
                     </div>
-                    <label>vertrouwen dat het wegen zijn</label>
+                    <label>vertrouwen dat het wegen zijn:</label>
                     <div className="progress barholder">
                         <div className="progress-bar roadbar" role="roadbar">Nog niet berekend</div>
                     </div>
