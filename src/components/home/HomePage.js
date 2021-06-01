@@ -20,7 +20,7 @@ export class HomePage extends React.Component {
                         <p>
                             Met deze map beoordelen we de
                             hoeveelheid groen. Ook bepalen
-                            we doormiddel van een AI waar
+                            we doormiddel van een kunstmatige intelligentie (AI) waar
                             er het beste nog meer groen moet
                             komen.
                             </p>
