@@ -29,6 +29,10 @@ export class MapPage extends React.Component {
         // let image = new Picture(document.querySelector('#image-wrapper'), photoDiv.src, 600, this.classifier);
         // console.log(Object.keys(image)) 
         // console.log(image.cells)
+
+        document.getElementsByClassName("testButton")[0].disabled = true;
+        document.getElementsByClassName("testButton")[0].innerHTML = "Berekenen..."        
+
         this.classify(photoDiv)
     }
 
@@ -66,6 +70,8 @@ export class MapPage extends React.Component {
             } else {
                 console.log(err)
             }
+            document.getElementsByClassName("testButton")[0].disabled = false;
+            document.getElementsByClassName("testButton")[0].innerHTML = "Bereken"    
         })
     }
 
