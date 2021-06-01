@@ -28,9 +28,10 @@ export default class Cell {
         let blockHeight = this.img.height / this.img.dimension;
         const left = blockWidth * (this.index % this.img.dimension);
         const top = blockHeight * (Math.floor(this.index / this.img.dimension));
-
+        
+        // const img = document.createElement('img');
         div.style.backgroundImage = `url(${this.img.imageSrc})`;
-        div.src = this.img.imageSrc;
+        console.log(this.img.imageSrc)
         div.style.backgroundSize = `${this.img.width}px ${this.img.height}px`;
         div.style.position = 'absolute'
         div.style.width = `${blockWidth}px`

@@ -1,6 +1,7 @@
 import React from "react";
 import Map from "./Map";
 import * as ml5 from "ml5";
+import Picture from "./Picture"
 // import PicImg from "../img/groupphoto.jpeg";
 
 export class MapPage extends React.Component {
@@ -22,6 +23,7 @@ export class MapPage extends React.Component {
         let photoDiv = document.getElementById("testImg");
 
         let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
+        // getImageData
 
         const dataURI = mapContainer.toDataURL();
         photoDiv.src = dataURI
@@ -79,7 +81,7 @@ export class MapPage extends React.Component {
                     {/* <canvas id="gridCanvas"></canvas> */}
                     <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">Bereken</button>
                 </div>
-                {/* <div id="image-wrapper"></div> */}
+                <div id="image-wrapper"></div>
 
                 <div className="scoreBoard">
                     <h1 className="Title">Screen Green Machine</h1>
