@@ -320,6 +320,7 @@ text-align: center;
 ::-webkit-scrollbar-thumb {
   background: #74A343;
   border-radius: 10px;
+  border: #043604 solid 2px;
 }
 
 /* Handle on hover */
