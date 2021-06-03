@@ -3,7 +3,7 @@ import Cell from "./Cell";
 export default class Picture {
     constructor(el, mapbox, width) {
         this.parentEl = el;
-        this.dimension = 3;
+        this.dimension = 5;
         this.mapBox = mapbox;
         this.width = width
         // this.height = height
