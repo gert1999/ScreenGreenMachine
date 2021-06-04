@@ -17,7 +17,7 @@ export default class Cell {
 
         canvas.width = blockWidth
         canvas.height = blockHeight
-        canvas.style.display = "none"
+        // canvas.style.display = "none"
 
         const left = blockWidth * (this.index % this.map.dimension);
         const top = blockHeight * (Math.floor(this.index / this.map.dimension));

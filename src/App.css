@@ -302,10 +302,6 @@ text-align: center;
   background-color: darkslategray !important;
 }
 
-#testImg {
-  /* display: none; */
-}
-
 canvas {
   border: none;
   /* display: block; */

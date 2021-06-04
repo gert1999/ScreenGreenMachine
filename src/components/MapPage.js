@@ -41,13 +41,9 @@ export class MapPage extends React.Component {
             imgElement.src = newimage
             imgElement.style.margin = "2px"
             wrapper.appendChild(imgElement)
-            // console.log(imgElement)
-
-            // this.classify(imgElement)
             this.imgArray.push(imgElement)
         }
-        // console.log(wrapper)
-        // this.classify(photoDiv)
+
         this.classify()
     }
 
