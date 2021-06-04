@@ -115,8 +115,6 @@ export class MapPage extends React.Component {
 
                 <div>
                     <Map />
-                    <img id="testImg" src="" className="preview" alt="preview of screenshot"></img>
-                    {/* <canvas id="gridCanvas"></canvas> */}
                     <button onClick={() => this.mapboxToImg()} className="testButton btn btn-success">Bereken</button>
                     <div id="image-wrapper"></div>
                 </div>
