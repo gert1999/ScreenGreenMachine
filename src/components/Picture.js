@@ -10,13 +10,13 @@ export default class Picture {
         this.cells = [];
         this.init()
 
-        console.log(this.mapBox.width)
-        console.log(this.width)
+        // console.log(this.mapBox.width)
+        // console.log(this.width)
         // console.log(width)
 
         this.height = this.mapBox.height * this.width / this.mapBox.width;
         // this.height = this.mapBox.getBoundingClientRect().height
-        console.log(this.height)
+        // console.log(this.height)
         // this.height = height
 
 

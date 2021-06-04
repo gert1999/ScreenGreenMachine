@@ -18,13 +18,14 @@ export class MapPage extends React.Component {
         });
 
         this.imgArray = [];
+        this.resultArray = [];
     }
 
     async mapboxToImg() {
         // let photoDiv = document.getElementById("testImg");
 
         let mapContainer = document.getElementsByClassName("mapboxgl-canvas")[0];
-        console.log(mapContainer)
+        // console.log(mapContainer)
         let wrapper = document.querySelector('#image-wrapper')
 
         let image = new Picture(wrapper, mapContainer, mapContainer.getBoundingClientRect().width);
@@ -45,22 +46,20 @@ export class MapPage extends React.Component {
             // this.classify(imgElement)
             this.imgArray.push(imgElement)
         }
-        console.log(wrapper)
+        // console.log(wrapper)
         // this.classify(photoDiv)
         this.classify()
     }
 
     async classify() {
-        let grassBar = document.getElementsByClassName("grassbar")[0];
-        let treesBar = document.getElementsByClassName("treesbar")[0];
-        let waterBar = document.getElementsByClassName("waterbar")[0];
-        let buildingBar = document.getElementsByClassName("buildingbar")[0];
-        let roadBar = document.getElementsByClassName("roadbar")[0];
+
+        this.resultArray = [];
 
         for (let img of this.imgArray) {
             await this.classifier.classify(img, (err, res) => {
+                this.resultArray.push(res[0].label);
                 if (!err) {
-                    console.log(res)
+                    // console.log(res)
                     // check which label the result has and assign to the right bar
                     if (res[0].label === "Grass") {
                         img.style.border = "solid 5px green"
@@ -78,6 +77,36 @@ export class MapPage extends React.Component {
                 }
             })
         }
+        this.setResults()
+    }
+
+    setResults() {
+        let green = 0
+        let water = 0
+        let city = 0
+
+        for (let r of this.resultArray) {
+            if (r === "Grass" || r === "Trees") {
+               green++ 
+            } else if (r === "Water") {
+                water++
+            } else if (r === "Buildings" || r === "Roads") {
+                city++
+            }
+        }
+
+        let grassBar = document.getElementsByClassName("grassbar")[0];
+        let waterBar = document.getElementsByClassName("waterbar")[0];
+        let buildingBar = document.getElementsByClassName("buildingbar")[0];
+
+        grassBar.style.width = `${green / this.resultArray.length * 100}%`
+        grassBar.innerHTML = `${Math.floor(green / this.resultArray.length * 100)}%`
+
+        waterBar.style.width = `${water / this.resultArray.length * 100}%`
+        waterBar.innerHTML = `${Math.floor(water / this.resultArray.length * 100)}%`
+
+        buildingBar.style.width = `${city / this.resultArray.length * 100}%`
+        buildingBar.innerHTML = `${Math.floor(city / this.resultArray.length * 100)}%`
     }
 
     render() {
@@ -94,28 +123,19 @@ export class MapPage extends React.Component {
 
                 <div className="scoreBoard">
                     <h1 className="Title">Screen Green Machine</h1>
-                    <label>vertrouwen dat het gras is:</label>
+                    <label>Procent aan groen:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-success grassbar" role="grassbar">Nog niet berekend</div>
                     </div>
-                    <label>vertrouwen dat het bomen zijn:</label>
-                    <div className="progress barholder">
-                        <div className="progress-bar bg-danger treesbar" role="treesbar">Nog niet berekend</div>
-                    </div>
-                    <label>vertrouwen dat het water is:</label>
+                    <label>Procent aan water:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-info waterbar" role="waterbar">Nog niet berekend</div>
                     </div>
-                    <label>vertrouwen dat het gebouwen zijn:</label>
+                    <label>Procent aan verstedelijking:</label>
                     <div className="progress barholder">
                         <div className="progress-bar bg-warning buildingbar" role="buildingbar">Nog niet berekend</div>
                     </div>
-                    <label>vertrouwen dat het wegen zijn:</label>
-                    <div className="progress barholder">
-                        <div className="progress-bar roadbar" role="roadbar">Nog niet berekend</div>
-                    </div>
                 </div>
-
             </div>
         )
     }
