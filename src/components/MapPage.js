@@ -58,13 +58,13 @@ export class MapPage extends React.Component {
                     // console.log(res)
                     // check which label the result has and assign to the right bar
                     if (res[0].label === "Grass") {
-                        img.style.border = "solid 5px green"
+                        img.style.border = "solid 5px lime"
                     } else if (res[0].label === "Trees") {
-                        img.style.border = "solid 5px darkgreen"
+                        img.style.border = "solid 5px forestgreen"
                     } else if (res[0].label === "Water") {
                         img.style.border = "solid 5px blue"
                     } else if (res[0].label === "Buildings") {
-                        img.style.border = "solid 5px gray"
+                        img.style.border = "solid 5px silver"
                     } else if (res[0].label === "Roads") {
                         img.style.border = "solid 5px black"
                     }
