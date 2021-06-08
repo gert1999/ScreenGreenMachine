@@ -17,16 +17,16 @@ const Map = () => {
         });
 
         // //dit maakt een marker
-    //     var marker = new mapboxgl.Marker({
-    //         color: "#4CBB17",
-    //     })
-    //     .setLngLat([4.5, 51.91])
-    //     .setPopup(new mapboxgl.Popup().setHTML(`<img class="pin-img" src="${boom}"><h2>Trots op mijn nieuwe geveltuintje!🤩</h2><button class="btn btn-primary">Deel nu!</button></button>`))
-    //     .addTo(map);
+        // var marker = new mapboxgl.Marker({
+        //     color: "#4CBB17",
+        // })
+        // .setLngLat([4.5, 51.91])
+        // .setPopup(new mapboxgl.Popup().setHTML(`<img class="pin-img" src="${boom}"><h2>Trots op mijn nieuwe geveltuintje!🤩</h2><button class="btn btn-primary">Deel nu!</button></button>`))
+        // .addTo(map);
 
-    //     map.dragRotate.disable();
-    //     map.touchZoomRotate.disableRotation();
-    // }, []);
+        // map.dragRotate.disable();
+        // map.touchZoomRotate.disableRotation();
+    }, []);
 
     return <div id="mapContainer" className="map"></div>
     ;
